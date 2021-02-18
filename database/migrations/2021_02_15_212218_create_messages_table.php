@@ -15,14 +15,14 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->string('send_from', 50);
-            $table->string('send_to', 50);
-            $table->string('message', 250);
-            $table->string('purl_confirmation', 100);
-            $table->datetime('purl_confirmation_send');
-            $table->string('purl_read', 100);
-            $table->datetime('purl_read_send');
-            $table->datetime('message_readed');
+            $table->string('send_from', 50)->nullable();
+            $table->string('send_to', 50)->nullable();
+            $table->string('message', 250)->nullable();
+            $table->string('purl_confirmation', 100)->nullable();
+            $table->datetime('purl_confirmation_send')->nullable();
+            $table->string('purl_read', 100)->nullable();
+            $table->datetime('purl_read_send')->nullable();
+            $table->datetime('message_readed')->nullable();
         });
     }
 
